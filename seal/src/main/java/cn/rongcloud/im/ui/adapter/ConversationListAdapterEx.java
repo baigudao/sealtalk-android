@@ -12,6 +12,7 @@ import io.rong.imlib.model.Conversation;
  * Created by weiqinxiao on 15/11/5.
  */
 public class ConversationListAdapterEx extends ConversationListAdapter {
+
     public ConversationListAdapterEx(Context context) {
         super(context);
     }

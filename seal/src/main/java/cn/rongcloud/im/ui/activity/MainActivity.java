@@ -120,10 +120,10 @@ public class MainActivity extends FragmentActivity implements
         mUnreadNumView.setOnClickListener(this);
         mUnreadNumView.setDragListencer(this);
 
-        mFragment.add(conversationList);
-        mFragment.add(new ContactsFragment());
-        mFragment.add(new DiscoverFragment());
-        mFragment.add(new MineFragment());
+        mFragment.add(conversationList);//会话
+        mFragment.add(new ContactsFragment());//通讯录
+        mFragment.add(new DiscoverFragment());//发现
+        mFragment.add(new MineFragment());//我
         FragmentPagerAdapter fragmentPagerAdapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
             @Override
             public Fragment getItem(int position) {
@@ -144,7 +144,7 @@ public class MainActivity extends FragmentActivity implements
 
     private Fragment initConversationList() {
         if (mConversationListFragment == null) {
-            ConversationListFragment listFragment = new ConversationListFragment();
+            ConversationListFragment listFragment = new ConversationListFragment();//ConversationListFragment是io.rong.imkit.fragment中的定义好的
             listFragment.setAdapter(new ConversationListAdapterEx(RongContext.getInstance()));
             Uri uri;
             if (isDebug) {

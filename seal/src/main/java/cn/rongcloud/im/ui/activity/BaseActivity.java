@@ -53,7 +53,7 @@ public abstract class BaseActivity extends FragmentActivity implements OnDataLis
         mTitle = (TextView) super.findViewById(R.id.tv_title);
         mBtnBackDrawable = getResources().getDrawable(R.drawable.ac_back_icon);
         mBtnBackDrawable.setBounds(0, 0, mBtnBackDrawable.getMinimumWidth(),
-                                   mBtnBackDrawable.getMinimumHeight());
+                mBtnBackDrawable.getMinimumHeight());
 
 
         mAsyncTaskManager = AsyncTaskManager.getInstance(getApplicationContext());
@@ -66,7 +66,7 @@ public abstract class BaseActivity extends FragmentActivity implements OnDataLis
     @Override
     public void setContentView(View view) {
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
-            ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT, 1);
+                ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT, 1);
         mContentView.addView(view, lp);
     }
 
@@ -200,10 +200,10 @@ public abstract class BaseActivity extends FragmentActivity implements OnDataLis
     /**
      * 发送请求（需要检查网络）
      *
-     * @param id 请求数据的用户ID或者groupID
+     * @param id          请求数据的用户ID或者groupID
      * @param requestCode 请求码
      */
-    public void request(String id , int requestCode) {
+    public void request(String id, int requestCode) {
         if (mAsyncTaskManager != null) {
             mAsyncTaskManager.request(id, requestCode, this);
         }

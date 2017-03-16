@@ -81,10 +81,10 @@ public class MainActivity extends FragmentActivity implements
 
 
     private void initViews() {
-        RelativeLayout chatRLayout = (RelativeLayout) findViewById(R.id.seal_chat);
-        RelativeLayout contactRLayout = (RelativeLayout) findViewById(R.id.seal_contact_list);
-        RelativeLayout foundRLayout = (RelativeLayout) findViewById(R.id.seal_find);
-        RelativeLayout mineRLayout = (RelativeLayout) findViewById(R.id.seal_me);
+        RelativeLayout chatRLayout = (RelativeLayout) findViewById(R.id.seal_chat);//会话
+        RelativeLayout contactRLayout = (RelativeLayout) findViewById(R.id.seal_contact_list);//通讯录
+        RelativeLayout foundRLayout = (RelativeLayout) findViewById(R.id.seal_find);//发现
+        RelativeLayout mineRLayout = (RelativeLayout) findViewById(R.id.seal_me);//我
         mImageChats = (ImageView) findViewById(R.id.tab_img_chats);
         mImageContact = (ImageView) findViewById(R.id.tab_img_contact);
         mImageFind = (ImageView) findViewById(R.id.tab_img_find);
@@ -180,6 +180,7 @@ public class MainActivity extends FragmentActivity implements
                         Conversation.ConversationType.APP_PUBLIC_SERVICE,
                         Conversation.ConversationType.SYSTEM
                 };
+
             }
             listFragment.setUri(uri);
             mConversationListFragment = listFragment;
@@ -188,6 +189,7 @@ public class MainActivity extends FragmentActivity implements
             return mConversationListFragment;
         }
     }
+
 
     @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -253,7 +255,7 @@ public class MainActivity extends FragmentActivity implements
                     }
                     RLog.i("MainActivity", "time = " + (secondClick - firstClick));
                     if (secondClick - firstClick > 0 && secondClick - firstClick <= 800) {
-                        mConversationListFragment.focusUnreadItem();
+                        mConversationListFragment.focusUnreadItem();//聚焦到未读消息item
                         firstClick = 0;
                         secondClick = 0;
                     } else if (firstClick != 0 && secondClick != 0) {
@@ -261,7 +263,7 @@ public class MainActivity extends FragmentActivity implements
                         secondClick = 0;
                     }
                 }
-                mViewPager.setCurrentItem(0, false);
+                mViewPager.setCurrentItem(0, false);//是否光滑滑动
                 break;
             case R.id.seal_contact_list:
                 mViewPager.setCurrentItem(1, false);

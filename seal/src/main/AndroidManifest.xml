@@ -471,7 +471,7 @@
 
         <service
             android:name="com.huawei.android.pushagent.PushService"
-            android:process=":hwpushservice"></service>
+            android:process=":hwpushservice"/>
         <!-- 华为 配置结束 < -->
 
         <!-- GCM 配置 < -->

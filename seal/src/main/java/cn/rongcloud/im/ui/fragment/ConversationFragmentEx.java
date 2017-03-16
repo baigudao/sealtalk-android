@@ -1,6 +1,7 @@
 package cn.rongcloud.im.ui.fragment;
 
 import android.content.Intent;
+
 import cn.rongcloud.im.ui.activity.ReadReceiptDetailActivity;
 import io.rong.imkit.fragment.ConversationFragment;
 import io.rong.imlib.model.Conversation;
@@ -13,6 +14,7 @@ import io.rong.imlib.model.Conversation;
  *  Created by Yuejunhong on 2016/10/10.
  */
 public class ConversationFragmentEx extends ConversationFragment {
+
     @Override
     public boolean onResendItemClick(io.rong.imlib.model.Message message) {
         return false;
@@ -33,4 +35,5 @@ public class ConversationFragmentEx extends ConversationFragment {
             super.onWarningDialog(msg);
         }
     }
+
 }

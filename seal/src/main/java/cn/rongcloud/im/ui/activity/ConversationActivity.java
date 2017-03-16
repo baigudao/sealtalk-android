@@ -92,7 +92,7 @@ public class ConversationActivity extends BaseActivity implements View.OnClickLi
     @TargetApi(23)
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.conversation);
+        setContentView(R.layout.conversation);//会话界面
         sp = getSharedPreferences("config", MODE_PRIVATE);
         mDialog = new LoadingDialog(this);
 
